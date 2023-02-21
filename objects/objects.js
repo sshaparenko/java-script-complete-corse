@@ -32,7 +32,7 @@ const circle = {
 console.log(circle.circumference());
 console.log(circle.area());
 
-//3
+//4
 const account = {
     name: "Alex",
     balance: 0,
