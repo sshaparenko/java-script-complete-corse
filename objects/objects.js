@@ -33,3 +33,17 @@ console.log(circle.circumference());
 console.log(circle.area());
 
 //3
+const account = {
+    name: "Alex",
+    balance: 0,
+    credit: function(number = 5){
+        this.balance+=number;
+        return this.balance;
+    },
+    describe: function(){return `Your name is ${this.name} and balance is ${this.balance}`;}
+}
+
+account.credit();
+console.log(account.describe());
+account.credit(-2000);
+console.log(account.describe());
