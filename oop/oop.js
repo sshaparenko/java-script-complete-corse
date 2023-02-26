@@ -1,4 +1,5 @@
 //1
+console.log("TASK1-------")
 class Dog {
     constructor(name, species, size) {
         this.name = name;
@@ -16,6 +17,7 @@ console.log(dog1.bark());
 console.log(dog2.bark());
 
 //2
+console.log("\nTASK2-------")
 class Character {
     constructor(name, health, strength) {
       this.name = name;
@@ -67,7 +69,7 @@ hero.attack(boss);
 console.log(hero.describe());
 
 //3
-console.log("TASK3-------")
+console.log("\nTASK3-------")
 class Account {
     constructor(name) {
         this.name = name;
