@@ -42,6 +42,31 @@ const movieList = [
   imdbRating: 8.5
 }];
 
+const governmentForms = [{
+    name: "Plutocracy",
+    definition: "Rule by the wealthy"
+},
+{
+    name: "Oligarchy",
+    definition: "Rule by a small number of people"
+},
+{
+    name: "Kleptocracy",
+    definition: "Rule by the thieves"
+},
+{
+    name: "Theocracy",
+    definition: "Rule by a religious elite"
+},
+{
+    name: "Democracy",
+    definition: "Rule by the people"
+},
+{
+    name: "Autocracy",
+    definition: "Rule by a single person"
+}];
+
 //1
 /*Write a program that shows the titles of movies 
 released before the year 20002000, using functional 
@@ -54,4 +79,13 @@ const titles = movies => movies.map(m => m.title);
 console.log(titles(before2000(movieList, filterByYear)));
 
 //2
+/*Complete the following program to compute and return
+the names of political forms ending with "cy"*/
 console.log("\nTask2....");
+const filter = forms => forms.filter(form => form.name.endsWith("cy"));
+const formTitles = forms => forms.map(form => form.name);
+
+console.log(formTitles(filter(governmentForms)));
+
+//3
+console.log()
