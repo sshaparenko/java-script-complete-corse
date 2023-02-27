@@ -67,6 +67,30 @@ const governmentForms = [{
     definition: "Rule by a single person"
 }];
 
+const students = [
+  {
+    name: "Anna",
+    sex: "f",
+    grades: [4.5, 3.5, 4]
+  },
+  {
+    name: "Dennis",
+    sex: "m",
+    country: "Germany",
+    grades: [5, 1.5, 4]
+  },
+  {
+    name: "Martha",
+    sex: "f",
+    grades: [5, 4, 2.5, 3]
+  },
+  {
+    name: "Brock",
+    sex: "m",
+    grades: [4, 3, 2]
+  }
+];
+
 //1
 /*Write a program that shows the titles of movies 
 released before the year 20002000, using functional 
@@ -88,4 +112,15 @@ const formTitles = forms => forms.map(form => form.name);
 console.log(formTitles(filter(governmentForms)));
 
 //3
-console.log()
+console.log("\nTask3...");
+const arrays = [[1, 4], [11], [3, 5, 7]];
+
+function findSum(array) {
+    let sum = 0;
+    for(element of array) {
+        sum += element.reduce((acc, value) => acc += value, 0);
+    }
+    return sum;
+}
+
+console.log(findSum(arrays));
