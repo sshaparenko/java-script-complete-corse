@@ -117,10 +117,32 @@ const arrays = [[1, 4], [11], [3, 5, 7]];
 
 function findSum(array) {
     let sum = 0;
-    for(element of array) {
+    for(const element of array) {
         sum += element.reduce((acc, value) => acc += value, 0);
     }
     return sum;
-}
+};
 
 console.log(findSum(arrays));
+
+//4
+/**
+ * Complete the following program to compute and return
+ * the female student’s results (name and average grade). 
+ * Refactor it using functional programming. 
+ * Execution results must stay the same.
+ */
+console.log("\nTask4....")
+function studentResult(students){
+    const femStudents = students => students.filter(st => st.sex === "f");
+    const avgGrade = students => students.map(st => {
+        const gradesNumber = st.grades.length;
+        st.grades = st.grades.reduce((acc, value) => acc += value, 0);
+        st.grades /= gradesNumber;
+    });
+    const st = femStudents(students);
+    avgGrade(st);
+    return st;
+};
+
+console.log(studentResult(students));
