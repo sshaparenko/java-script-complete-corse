@@ -32,6 +32,7 @@ function showChildtwo (node, index){
     console.error(node.childNodes[index].nodeName);
   }
 };
+
 let start = performance.now();
 console.log(showChild(document.body, 1));
 let timeTaken = performance.now() - start;
